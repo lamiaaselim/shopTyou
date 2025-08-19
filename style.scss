@@ -1,0 +1,26 @@
+@use "mixin";
+@use "func";
+
+
+// @mixin border-radius ($radius){
+// -webkit-border-radius: $radius;
+// -moz-border-radius: $radius;
+// -o-border-radius: $radius;
+// -ms-border-radius: $radius;
+// border-radius: $radius;
+// } 
+
+
+$border-color:rgba(25, 172, 64, 0.651); 
+$bg: white;
+
+main {
+    border: 3px solid $border-color;
+    color: $border-color;
+    margin: 5px;
+    padding: 20px;
+    background-color: $bg;
+    // @include border-radius(20px);
+    @include mixin.border-radius(20px);
+    @include func.border-radius(20px);
+}
